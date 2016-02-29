@@ -681,8 +681,7 @@ table.table_block td {
 }
 
 //Labels New/Sale
-.new-box,
-.sale-box {
+.new-box {
 	position: absolute;
 	top: -4px;
 	overflow: hidden;
@@ -692,18 +691,28 @@ table.table_block td {
 	z-index: 0;
 }
 
+.sale-box {
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	z-index: 0;
+}
+
 .new-box {
 	left: -4px;
 }
 
 .sale-box {
-	right: -5px;
+	right: 0px;
 }
 
 .new-label {
 	font: 700 14px / 12px $font-family;
 	color: $light-text-color;
-	background: #6ad4ff;
+	background: $orange;
 	text-transform: uppercase;
 	padding: 9px 0 7px;
 	text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
@@ -714,7 +723,7 @@ table.table_block td {
 	left: -33px;
 	top: 16px;
 	z-index: 1;
-	@include rotate(-45deg);
+	@include rotate(0deg);
 	&:before {
 		position: absolute;
 		bottom: -3px;
@@ -744,20 +753,20 @@ table.table_block td {
 }
 
 .sale-label {
-	font: 700 14px / 12px $font-family;
+	font: 700 16px / 20px $font-family;
 	color: $light-text-color;
 	background: #f13340;
 	text-transform: uppercase;
-	padding: 9px 0 7px;
+	padding: 5px 0;
 	text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
-	width: 130px;
+	width: 100%;
 	text-align: center;
 	display: block;
 	position: absolute;
-	right: -33px;
-	top: 16px;
+	right: -90px;
+	top: 65px;
 	z-index: 1;
-	@include rotate(45deg);
+	@include rotate(-15deg);
 	&:before {
 		position: absolute;
 		bottom: -3px;
@@ -907,7 +916,7 @@ table.table_block td {
 	}
 	> li.active a,
 	>li a:hover {
-		background: $dark-background;
+		background: $orange;
 		color: $light-text-color;
 		padding: 10px;
 		// min 768px
@@ -1734,7 +1743,7 @@ div.star a:hover {
 	background-color: $dark-background;
 	// min 768px
 	@media (min-width: $screen-sm) {
-		background: url(../img/footer-bg.png) repeat-x $dark-background;
+		background: linear-gradient(to bottom, $orange 0%,$orange 15%,$dark-background 16%,$dark-background 16%,$dark-background 100%);
 	}
 	.container {
 		padding-bottom: 100px;
@@ -1857,7 +1866,7 @@ div.star a:hover {
 					}
 					a {
 						display: inline-block;
-						color: #908f8f;
+						color: $base-text-color;
 						font-size: 28px;
 						// min 768px max 991px
 						@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
@@ -3397,7 +3406,9 @@ div.star.star_hover {
 			@media (max-width: $screen-sm-max) {
 				padding-bottom: 0;
 			}
-		}
+			&:hover em[id^=icon-]{
+			background-color: $orange;}
+			}
 	}
 	p {
 		em {

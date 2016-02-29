@@ -302,6 +302,7 @@ ul.product_list.grid {
 					.product-image-container {
 						.content_price {
 							display: block;
+							z-index:2;
 						}
 						.quick-view {
 							display: block;
