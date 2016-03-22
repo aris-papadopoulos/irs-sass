@@ -408,6 +408,15 @@ span.exclusive {
 	}
 }
 
+.compare-form .button.button-medium {
+	background: $purple;
+	@include gradient-vertical($purple, $darker-purple);
+	border-color: $purple;
+	span {
+		border-color: $light-background;
+		}
+}
+
 .button.button-medium.exclusive {
 	border-color: #db8600 #d98305 #c86d26 #d98305;
 	@include background-image(linear-gradient(top, rgba(253, 170, 2, 1), rgba(254, 151, 2, 1)));
