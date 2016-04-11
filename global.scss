@@ -702,7 +702,7 @@ table.table_block td {
 
 .sale-box {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	overflow: hidden;
 	height: 100px;
 	width: 100%;
@@ -762,10 +762,10 @@ table.table_block td {
 }
 
 .sale-label {
-	font: 700 16px / 20px $font-family;
+	font: 700 15px / 20px $font-family;
 	color: $light-text-color;
 	background: #f13340;
-	text-transform: uppercase;
+	text-transform: none;
 	padding: 5px 0;
 	text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
 	width: 100%;
@@ -773,9 +773,9 @@ table.table_block td {
 	display: block;
 	position: absolute;
 	right: -90px;
-	top: 65px;
+	top: 12px;
 	z-index: 1;
-	@include rotate(-15deg);
+	@include rotate(18deg);
 	&:before {
 		position: absolute;
 		bottom: -3px;
@@ -791,7 +791,6 @@ table.table_block td {
 	}
 	&:after {
 		position: absolute;
-		bottom: -3px;
 		left: 5px;
 		width: 0px;
 		height: 0px;
